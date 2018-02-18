@@ -6,6 +6,7 @@ import PoetCatalog from '@/page/poetcatalog'
 import PoetRelation from '@/page/poetrelation'
 // import PoetPlace from '@/page/poetplace'
 import PoetCard from '@/page/poetcard'
+import PoetInfo from '@/page/poetinfo'
 import PoemCard from '@/page/poemcard'
 import SearchAll from '@/page/searchall'
 import SearchModel from '@/page/searchmodel'
@@ -29,6 +30,9 @@ export default new Router({
     },{
       path: '/poetcard',
       component: PoetCard
+    },{
+      path: '/poetinfo/:id',
+      component: PoetInfo
     },{
       path: '/poemcard',
       component: PoemCard

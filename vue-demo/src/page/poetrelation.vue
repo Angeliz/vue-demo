@@ -5,10 +5,20 @@
       <el-aside width="10%"></el-aside>
       <el-container>
         <el-main>
-          <TupuPoetrelation></TupuPoetrelation>
+          <el-row :gutter="20">
+            <el-col :md="16">
+              <div class="grid-content bg-purple">
+                <TupuPoetrelation></TupuPoetrelation>
+              </div>
+            </el-col>
+            <el-col :md="8">
+              <div class="grid-content bg-purple">
+
+              </div>
+            </el-col>
+          </el-row>
         </el-main>
       </el-container>
-      <el-aside width="25%"></el-aside>
       <el-aside width="10%"></el-aside>
     </el-container>
   </div>

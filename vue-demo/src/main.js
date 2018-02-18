@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 // 按需引入element组件
-import {  Menu,Submenu,MenuItem, Row,Col, Container,Header,Aside,Main,Footer, Card, Button, Select } from 'element-ui'
+import {  Menu,Submenu,MenuItem, Row,Col, Container,Header,Aside,Main,Footer, Card, Button, Select, Tabs,TabPane, Tag } from 'element-ui'
 // 引用API文件
 import api from './api/index.js'
 // 将API方法绑定到全局
@@ -30,6 +30,11 @@ Vue.component(Card.name, Card)
 
 Vue.component(Button.name, Button)
 Vue.component(Select.name, Select)
+
+Vue.component(Tabs.name, Tabs)
+Vue.component(TabPane.name, TabPane)
+
+Vue.component(Tag.name, Tag)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

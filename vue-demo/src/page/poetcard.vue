@@ -7,7 +7,7 @@
         <!--<el-header>Header</el-header>-->
         <el-main>
           <div class="waterfall">
-            <Card v-for="i in list" :name=i.name :alter-name=i.alter_name :born=i.born :death=i.death :info=i.info :work=i.work ></Card>
+            <CardPoet v-for="i in list" :name=i.name :alter-name=i.alter_name :born=i.born :death=i.death :info=i.info :work=i.work :ob=i.ob></CardPoet>
           </div>
         </el-main>
       </el-container>
@@ -19,10 +19,10 @@
 
 <script>
   import Nav from '../components/nav.vue'
-  import Card from '../components/card.vue'
+  import CardPoet from '../components/card-poet.vue'
 
   export default {
-    components: { Nav, Card },
+    components: { Nav, CardPoet },
     data () {
       return {
         list: []

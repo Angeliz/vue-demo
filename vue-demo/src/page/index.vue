@@ -18,9 +18,9 @@
       <!--</div>-->
       <!--<ul>-->
         <!--<li v-for="i in list">-->
-          <!--&lt;!&ndash;<time v-text="i.name"></time>&ndash;&gt;-->
-          <!--&lt;!&ndash;{{i.name}}&ndash;&gt;-->
-          <!--&lt;!&ndash;<router-link :to="'/content/1'">&ndash;&gt;-->
+          <!--<time v-text="i.name"></time>-->
+          <!--{{i.name}}-->
+          <!--<router-link :to="'/content/1'">-->
           <!--<router-link :to="'/content/' + i.ob">-->
             <!--{{ i.name }}-->
           <!--</router-link>-->
@@ -35,7 +35,7 @@
   import Nav from '../components/nav.vue'
   import Header from '../components/header.vue'
   import Footer from '../components/footer.vue'
-  import Card from '../components/card.vue'
+  import Card from '../components/card-poet.vue'
   export default {
     components: { Header, Footer, Nav, Card },
     data () {
