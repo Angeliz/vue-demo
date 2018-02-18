@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+// 按需引入element组件
+import {  Menu,Submenu,MenuItem, Row,Col, Container,Header,Aside,Main,Footer, Card, Button, Select } from 'element-ui'
 // 引用API文件
 import api from './api/index.js'
 // 将API方法绑定到全局
@@ -11,6 +12,24 @@ Vue.prototype.$api = api
 
 Vue.config.productionTip = false
 
+//element
+Vue.component(Menu.name, Menu)
+Vue.component(Submenu.name, Submenu)
+Vue.component(MenuItem.name, MenuItem)
+
+Vue.component(Row.name, Row)
+Vue.component(Col.name, Col)
+
+Vue.component(Container.name, Container)
+Vue.component(Header.name, Header)
+Vue.component(Aside.name, Aside)
+Vue.component(Main.name, Main)
+Vue.component(Footer.name, Footer)
+
+Vue.component(Card.name, Card)
+
+Vue.component(Button.name, Button)
+Vue.component(Select.name, Select)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -18,3 +37,6 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+//公共css文件
+import '../static/css/all.css'
