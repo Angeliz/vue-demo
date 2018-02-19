@@ -4,9 +4,10 @@ import Index from '@/page/index'
 import Content from '@/page/content'
 import PoetCatalog from '@/page/poetcatalog'
 import PoetRelation from '@/page/poetrelation'
-// import PoetPlace from '@/page/poetplace'
+import PoetWay from '@/page/poetway'
 import PoetCard from '@/page/poetcard'
 import PoetInfo from '@/page/poetinfo'
+import PoemInfo from '@/page/poeminfo'
 import PoemCard from '@/page/poemcard'
 import SearchAll from '@/page/searchall'
 import SearchModel from '@/page/searchmodel'
@@ -34,8 +35,14 @@ export default new Router({
       path: '/poetinfo/:id',
       component: PoetInfo
     },{
+      path: '/poetway',
+      component: PoetWay
+    },{
       path: '/poemcard',
       component: PoemCard
+    },{
+      path: '/poeminfo/:id',
+      component: PoemInfo
     },{
       path: '/searchall',
       component: SearchAll

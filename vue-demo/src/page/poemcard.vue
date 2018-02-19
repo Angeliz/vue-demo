@@ -7,7 +7,7 @@
         <!--<el-header>Header</el-header>-->
         <el-main>
           <div class="waterfall">
-            <CardPoem v-for="i in list" :name=i.name author='岑参'  :content=i.content ></CardPoem>
+            <CardPoem v-for="i in list" :name=i.name author='作者-岑参'  :content=i.content ></CardPoem>
           </div>
         </el-main>
       </el-container>

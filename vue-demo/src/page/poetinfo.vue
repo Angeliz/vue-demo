@@ -21,7 +21,6 @@
       </el-container>
       <el-aside width="10%"></el-aside>
     </el-container>
-
   </div>
 </template>
 

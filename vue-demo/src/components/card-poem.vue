@@ -6,7 +6,7 @@
         <el-button style="float: right; padding: 3px 0" type="text">进入主页</el-button>
       </div>
       <div class="text item">
-        <p>作者：{{author}}</p>
+        <p>{{author}}</p>
         <p>{{content}}</p>
       </div>
     </el-card>
