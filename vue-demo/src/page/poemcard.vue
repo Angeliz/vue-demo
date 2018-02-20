@@ -4,7 +4,6 @@
     <el-container>
       <el-aside width="10%"></el-aside>
       <el-container>
-        <!--<el-header>Header</el-header>-->
         <el-main>
           <div class="waterfall">
             <CardPoem v-for="i in list" :name=i.name author='作者-岑参'  :content=i.content ></CardPoem>
