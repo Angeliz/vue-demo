@@ -86,6 +86,7 @@
     },
     created(){
       this.getData();
+      this.getRelation();
     },
     methods: {
       handleClick(tab, event) {
@@ -183,6 +184,11 @@
         tupuwork.on('click', params=> {
           this.title=params.name;
           this.content=params.value;
+        });
+      },
+      getRelation(){
+        this.$api.get('/datasource/relation', null, r => {
+          console.log(r.length);
         });
       }
     }

@@ -44,7 +44,7 @@
     },
     methods: {
       getData () {
-        this.$api.get('http://www.freekg.cn/poet/datasource/poet?poeturi='+this.$route.query.uri, null, r => {
+        this.$api.get('/datasource/poet?poeturi='+this.$route.query.uri, null, r => {
           console.log(r);
           this.poet=r;
           console.log(this.poet);
