@@ -6,12 +6,12 @@
       <el-container>
         <el-main>
           <el-row :gutter="40">
-            <el-col :md="6">
+            <el-col :md="5">
               <div class="grid-content bg-purple">
                 <InfoPoet :name=name :alter-name=poet[0].alter_name></InfoPoet>
               </div>
             </el-col>
-            <el-col :md="18">
+            <el-col :md="19">
               <div class="grid-content bg-purple">
                 <TabPoet :born=poet[0].born :death=poet[0].death :info=poet[0].info :work=poet[0].work></TabPoet>
               </div>
