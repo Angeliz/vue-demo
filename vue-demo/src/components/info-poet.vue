@@ -6,7 +6,7 @@
     <hr style="margin-bottom: 20px;">
     <hr style="margin-bottom: 10px;">
     <el-tag>唐朝</el-tag>
-    <el-tag>诗人</el-tag>
+    <!--<el-tag>诗人</el-tag>-->
   </div>
 </template>
 

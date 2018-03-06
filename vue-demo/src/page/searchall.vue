@@ -2,7 +2,7 @@
   <div>
     <Nav></Nav>
     <div :style="bg">
-      <el-input placeholder="请输入内容"  style="width: 400px;left: 50%;top: 50%;margin-left: -200px;margin-top: -20px;" v-model="input">
+      <el-input placeholder="请输入查询内容"  style="width: 400px;left: 50%;top: 50%;margin-left: -200px;margin-top: -20px;" v-model="input">
         <el-button slot="append" icon="el-icon-search" v-on:click="animation"></el-button>
       </el-input>
     </div>
@@ -12,7 +12,7 @@
         <el-main>
           <div class="waterfall">
             <CardPoet v-for="i in poet" :name=i.name :alter-name=i.alter_name :born=i.born :death=i.death info='略' work='略' :ob=i.ob></CardPoet>
-            <CardPoem v-for="i in poem" :name=i.name :author=i.author  :content=i.content ></CardPoem>
+            <CardPoem v-for="i in poem" :name=i.name :author=i.author  :content=i.content :id=i.id></CardPoem>
           </div>
         </el-main>
       </el-container>

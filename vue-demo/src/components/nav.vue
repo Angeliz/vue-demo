@@ -26,6 +26,7 @@
       <el-menu-item index="/searchall">普通查询</el-menu-item>
       <el-menu-item index="/searchmodel">模板查询</el-menu-item>
     </el-submenu>
+
   </el-menu>
 </template>
 <script>
