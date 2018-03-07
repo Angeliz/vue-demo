@@ -13,7 +13,7 @@
   export default {
     data() {
       return {
-        data: ''
+        data: '',
       }
     },
     mounted(){
@@ -23,6 +23,7 @@
       drawLine() {
         // 基于准备好的dom，初始化echarts实例
         let myChart = echarts.init(document.getElementById('myChart'));
+        myChart.showLoading();
         let one = [];
         let two = [];
         let three = [];
@@ -128,6 +129,7 @@
                 }
               ]
             };
+            myChart.hideLoading();
             myChart.setOption(option);
           }
         );

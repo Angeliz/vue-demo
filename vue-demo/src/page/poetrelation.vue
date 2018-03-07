@@ -68,6 +68,7 @@
         let namelist = [];
         // 绘制图表
         _this.$api.get('/datasource/allpoet', null, json => {
+          myChart.showLoading();
           const num = json.length;
           for (let m = 0; m < num; m++) {
             namelist.push(json[m].name);
@@ -179,6 +180,7 @@
               ]
             };
             console.log(11111);
+            myChart.hideLoading();
             myChart.setOption(option);
             myChart.on('click', function (params) {
               console.log(params);
