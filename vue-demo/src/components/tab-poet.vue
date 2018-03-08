@@ -11,26 +11,26 @@
       <h3>作品</h3>
       <p>{{work}}</p>
     </el-tab-pane>
-    <el-tab-pane label="关系图谱" name="second">
-      <el-row :gutter="40">
-        <el-col :md="16">
-          <div class="grid-content bg-purple">
-            <div id="tupurelation" style="width: 600px;height: 550px;"></div>
-          </div>
-        </el-col>
-        <el-col :md="8">
-          <div class="grid-content bg-purple">
-            <hr>
-            <h4>所选结点</h4>
-            <!--<p>{{this.title}}</p>-->
-            <hr>
-            <h4>详细信息</h4>
-            <!--<CardPoem  :name=this.title  :content=this.content ></CardPoem>-->
-          </div>
-        </el-col>
-      </el-row>
-    </el-tab-pane>
-    <el-tab-pane label="作品图谱" name="third">
+    <!--<el-tab-pane label="关系图谱" name="second">-->
+      <!--<el-row :gutter="40">-->
+        <!--<el-col :md="16">-->
+          <!--<div class="grid-content bg-purple">-->
+            <!--<div id="tupurelation" style="width: 600px;height: 550px;"></div>-->
+          <!--</div>-->
+        <!--</el-col>-->
+        <!--<el-col :md="8">-->
+          <!--<div class="grid-content bg-purple">-->
+            <!--<hr>-->
+            <!--<h4>所选结点</h4>-->
+            <!--&lt;!&ndash;<p>{{this.title}}</p>&ndash;&gt;-->
+            <!--<hr>-->
+            <!--<h4>详细信息</h4>-->
+            <!--&lt;!&ndash;<CardPoem  :name=this.title  :content=this.content ></CardPoem>&ndash;&gt;-->
+          <!--</div>-->
+        <!--</el-col>-->
+      <!--</el-row>-->
+    <!--</el-tab-pane>-->
+    <el-tab-pane label="作品图谱" name="second">
       <el-row :gutter="40">
         <el-col :md="16">
           <div class="grid-content bg-purple">
@@ -44,7 +44,7 @@
             <p>{{this.title}}</p>
             <hr>
             <h4>详细信息</h4>
-            <CardPoem  :name=this.title  :content=this.content ></CardPoem>
+            <CardPoem  v-for="i in list"  :name=i.title  :content=i.content ></CardPoem>
           </div>
         </el-col>
       </el-row>
@@ -79,14 +79,13 @@
           }
         }],
         edgelist:[],
-        title:'',
-        content:'',
+        list:[],
         author:this.$route.params.id
       };
     },
     created(){
       this.getData();
-      this.getRelation();
+//      this.getRelation();
     },
     methods: {
       handleClick(tab, event) {
@@ -104,7 +103,7 @@
         }];
         this.edgelist=[];
         this.$api.get('/datasource/work?poeturi='+this.$route.query.uri, null, r => {
-          console.log(1111111111111);
+//          console.log(1111111111111);
           if(r.length>100){
             r=r.slice(0,100);
           }
@@ -126,14 +125,14 @@
               lineStyle: {normal: {width: 0.8000}}
             });
           }
-//          this.draw();
-          console.log(this.nodeslist);
-          console.log(this.edgelist);
+//          console.log(this.nodeslist);
+//          console.log(this.edgelist);
           this.draw();
         })
       },
       draw(){
         let tupuwork = echarts.init(document.getElementById('tupuwork'));
+        tupuwork.showLoading();
         let option = {
           series: [
             {
@@ -179,18 +178,22 @@
           ]
         };
         console.log('0000000000');
+        tupuwork.hideLoading();
         tupuwork.setOption(option);
         console.log(123);
         tupuwork.on('click', params=> {
-          this.title=params.name;
-          this.content=params.value;
+          this.list=[];
+          this.list.push({
+            title:params.name,
+            content:params.value
+          });
         });
       },
-      getRelation(){
-        this.$api.get('/datasource/relation', null, r => {
-          console.log(r.length);
-        });
-      }
+//      getRelation(){
+//        this.$api.get('/datasource/relation', null, r => {
+//          console.log(r.length);
+//        });
+//      }
     }
   };
 </script>

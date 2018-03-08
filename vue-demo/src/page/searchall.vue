@@ -12,7 +12,7 @@
         <el-main>
           <div class="waterfall">
             <CardPoet v-for="i in poet" :name=i.name :alter-name=i.alter_name :born=i.born :death=i.death info='略' work='略' :ob=i.ob></CardPoet>
-            <CardPoem v-for="i in poem" :name=i.name :author=i.author  :content=i.content :id=i.id></CardPoem>
+            <CardPoem v-for="i in poem" :name=i.name :author=i.author  :content=i.content :id=i.o></CardPoem>
           </div>
         </el-main>
       </el-container>

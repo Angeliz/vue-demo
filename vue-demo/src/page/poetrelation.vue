@@ -196,6 +196,7 @@
       toNode(param) {
         this.no='';
         this.list=[];
+        this.poet=[];
         console.log(param);
         this.name0=param.data.name;
         this.uri=param.data.value;
