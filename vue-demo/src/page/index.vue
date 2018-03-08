@@ -1,58 +1,52 @@
 <template>
   <div>
-
-    <!--<Header></Header>-->
     <Nav></Nav>
-    <div >
-      <Card name="李白" info="6666" v-for="i in list"></Card>
-    </div>
-
-    <!--<div class="article_list">-->
-      <!--<div>-->
-        <!--<el-button>默认按钮</el-button>-->
-        <!--<el-button type="primary">主要按钮</el-button>-->
-        <!--<el-button type="success">成功按钮</el-button>-->
-        <!--<el-button type="info">信息按钮</el-button>-->
-        <!--<el-button type="warning">警告按钮</el-button>-->
-        <!--<el-button type="danger">危险按钮</el-button>-->
-      <!--</div>-->
-      <!--<ul>-->
-        <!--<li v-for="i in list">-->
-          <!--<time v-text="i.name"></time>-->
-          <!--{{i.name}}-->
-          <!--<router-link :to="'/content/1'">-->
-          <!--<router-link :to="'/content/' + i.ob">-->
-            <!--{{ i.name }}-->
-          <!--</router-link>-->
-        <!--</li>-->
-      <!--</ul>-->
-    <!--</div>-->
-    <!--<Footer></Footer>-->
+    <!--<el-carousel :interval="5000" arrow="always" height="673px">-->
+      <!--<el-carousel-item v-for="item in list" :key="item">-->
+        <!--<img :src="item">-->
+      <!--</el-carousel-item>-->
+    <!--</el-carousel>-->
   </div>
 </template>
 
 <script>
   import Nav from '../components/nav.vue'
-  import Header from '../components/header.vue'
-  import Footer from '../components/footer.vue'
-  import Card from '../components/card-poet.vue'
   export default {
-    components: { Header, Footer, Nav, Card },
-    data () {
+    components: {Nav},
+    data() {
       return {
-        list: [1,1,1,1,1,1,1,1,11,1,1,1,11,1,1]
+        img1:'./static/image/background.jpg',
+        list:[]
       }
     },
-//    created () {
-//      this.getData()
-//    },
-//    methods: {
-//      getData () {
-//        this.$api.get('/datasource/allpoet', null, r => {
-//          console.log(r);
-//          this.list = r;
-//        })
-//      }
-//    }
+    mounted(){
+      this.toPoetcatalog();
+    },
+    methods:{
+//      getImg(){
+//        this.list.push(this.img1);
+//      },
+      toPoetcatalog(){
+        window.location.assign("#/poetcatalog/");
+      }
+    }
   }
+
 </script>
+<!--<style>-->
+  <!--.el-carousel__item h3 {-->
+    <!--color: #475669;-->
+    <!--font-size: 18px;-->
+    <!--opacity: 0.75;-->
+    <!--line-height: 300px;-->
+    <!--margin: 0;-->
+  <!--}-->
+
+  <!--.el-carousel__item:nth-child(2n) {-->
+    <!--background-color: #99a9bf;-->
+  <!--}-->
+
+  <!--.el-carousel__item:nth-child(2n+1) {-->
+    <!--background-color: #d3dce6;-->
+  <!--}-->
+<!--</style>-->
