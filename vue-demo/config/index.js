@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/poet/datasource/**': {
-            target: 'http://www.freekg.cn', // 你接口的域名
+            target: 'http://www.freekg.cn', // 接口的域名
             secure: false,
             changeOrigin: false,
         }
@@ -58,7 +58,7 @@ module.exports = {
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 

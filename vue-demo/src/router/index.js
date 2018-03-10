@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/page/index'
-import Content from '@/page/content'
 import PoetCatalog from '@/page/poetcatalog'
 import PoetRelation from '@/page/poetrelation'
 import PoetWay from '@/page/poetway'
@@ -19,9 +18,6 @@ export default new Router({
     {
       path: '/',
       component: Index
-    }, {
-      path: '/content/:id',
-      component: Content
     }, {
       path: '/poetcatalog',
       component: PoetCatalog

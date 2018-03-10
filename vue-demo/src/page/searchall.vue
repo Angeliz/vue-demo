@@ -1,7 +1,7 @@
 <template>
   <div>
     <Nav></Nav>
-    <div :style="bg">
+    <div style="width: auto;height: 673px;transition:all 0.2s; background-image: url('static/image/background.jpg');background-size:cover">
       <el-input placeholder="请输入查询内容"  style="width: 400px;left: 50%;top: 50%;margin-left: -200px;margin-top: -20px;" v-model="input">
         <el-button slot="append" icon="el-icon-search" v-on:click="animation"></el-button>
       </el-input>
@@ -13,6 +13,7 @@
           <div class="waterfall">
             <CardPoet v-for="i in poet" :name=i.name :alter-name=i.alter_name :born=i.born :death=i.death info='略' work='略' :ob=i.ob></CardPoet>
             <CardPoem v-for="i in poem" :name=i.name :author=i.author  :content=i.content :id=i.o></CardPoem>
+            <CardPoem v-for="i in poemnew" :name=i.title :author=i.name  :content=i.content :id=i.poem></CardPoem>
           </div>
         </el-main>
       </el-container>
@@ -30,16 +31,17 @@
     components: {Nav,CardPoet,CardPoem},
     data(){
       return{
-        bg:{
-          width: 'auto',
-          height: '673px',
-          transition: 'all 0.2s',
-          backgroundImage: "url(" + require('../../static/image/background.jpg') + ")",
-          backgroundSize:'cover'
-        },
+//        bg:{
+//          width: 'auto',
+//          height: '673px',
+//          transition: 'all 0.2s',
+//          backgroundImage: "url(" + require('../../static/image/background.jpg') + ")",
+//          backgroundSize:'cover'
+//        },
         input:'',
         poet:[],
-        poem:[]
+        poem:[],
+        poemnew:[]
       }
     },
     methods:{
@@ -50,11 +52,13 @@
       result(){
         this.poet=[];
         this.poem=[];
+        this.poemnew=[];
         this.$api.get('/datasource/unknownquery?name='+this.input, null, json=> {
-          console.log(json);
+//          console.log(json);
           if(json.length===0){
             this.$api.get('datasource/naturequery?content='+this.input,null,r=>{
-              this.poem=[...r];
+//              console.log(r);
+              this.poemnew=[...r];
             });
           }else{
             if (json[0].born) {//判断单个实体的类型，是古诗还是诗人
