@@ -106,8 +106,8 @@
         this.$api.get('/datasource/work?poeturi='+this.$route.query.uri, null,  r => {
 //          console.log(1111111111111);
 //          console.log(r);
-          if(r.length>50){
-            r=r.slice(0,50);
+          if(r.length>10){
+            r=r.slice(0,10);
           }
 //          console.log(r);
           for (let i = 0; i < r.length; i++) {

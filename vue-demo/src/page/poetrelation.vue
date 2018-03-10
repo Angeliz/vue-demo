@@ -214,7 +214,9 @@
         this.poet=[];
         this.name0=param.name;
         this.uri=param.value;
+        console.log(this.uri);
         this.$api.get('/datasource/rela?referuri='+this.uri, null, r=> {
+          console.log(23333333333);
           console.log(r);
           this.list=[];
           let str=r.results.bindings[0].poem.value;

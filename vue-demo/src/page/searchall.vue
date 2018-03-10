@@ -52,10 +52,16 @@
         this.poem=[];
         this.$api.get('/datasource/unknownquery?name='+this.input, null, json=> {
           console.log(json);
-          if (json[0].born) {//判断单个实体的类型，是古诗还是诗人
-            this.poet=[...json];
-          } else {
-            this.poem=[...json];
+          if(json.length===0){
+            this.$api.get('datasource/naturequery?content='+this.input,null,r=>{
+              this.poem=[...r];
+            });
+          }else{
+            if (json[0].born) {//判断单个实体的类型，是古诗还是诗人
+              this.poet=[...json];
+            } else {
+              this.poem=[...json];
+            }
           }
         });
       },
