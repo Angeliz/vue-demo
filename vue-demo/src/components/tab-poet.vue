@@ -73,7 +73,7 @@
           <div class="grid-content bg-purple">
             <hr>
             <h4>所选结点</h4>
-            <p>{{this.title}}</p>
+            <p v-for="i in list" v-text="i.title"></p>
             <hr>
             <h4>详细信息</h4>
             <CardPoem  v-for="i in list"  :name=i.title  :content=i.content :id=i.id></CardPoem>

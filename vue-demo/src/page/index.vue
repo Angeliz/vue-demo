@@ -1,6 +1,6 @@
 <template>
     <div :style="styleDiv">
-      <Nav></Nav>
+      <!--<Nav></Nav>-->
       <div :style='styleInput'>
         <h1 style="text-align: center">FREEKG</h1>
         <el-input placeholder="请输入查询内容"   v-model="input">
@@ -11,9 +11,9 @@
 </template>
 
 <script>
-  import Nav from '../components/nav.vue'
+//  import Nav from '../components/nav.vue'
   export default {
-    components: { Nav },
+//    components: { Nav },
     data () {
       return {
         input:'',

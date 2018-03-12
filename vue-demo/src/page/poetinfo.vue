@@ -8,7 +8,7 @@
           <el-row :gutter="40">
             <el-col :md="5">
               <div class="grid-content bg-purple">
-                <InfoPoet :name=name :alter-name=tableData11[0].altername></InfoPoet>
+                <InfoPoet :name=name :alterName=tableData11[0].altername></InfoPoet>
               </div>
             </el-col>
             <el-col :md="19">
