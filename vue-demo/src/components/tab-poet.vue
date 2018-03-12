@@ -1,15 +1,47 @@
 <template>
   <el-tabs v-model="activeName" @tab-click="handleClick">
     <el-tab-pane label="基本信息" name="first">
-      <h3 style="font-weight: 600">生卒年</h3>
-      <p>生年：{{born}}</p>
-      <p>卒年：{{death}}</p>
-      <hr/>
-      <h3>介绍</h3>
-      <p>{{info}}</p>
-      <hr/>
-      <h3>作品</h3>
-      <p>{{work}}</p>
+      <el-table
+        :data="tableData1"
+        border
+        style="width: 100%">
+        <el-table-column
+          prop="name"
+          label="姓名"
+          width="70">
+        </el-table-column>
+        <el-table-column
+          prop="altername"
+          width="200"
+          label="别名">
+        </el-table-column>
+        <el-table-column
+          prop="born"
+          width="60"
+          label="生年">
+        </el-table-column>
+        <el-table-column
+          prop="death"
+          width="60"
+          label="卒年">
+        </el-table-column>
+        <el-table-column
+          prop="work"
+          label="代表作">
+        </el-table-column>
+      </el-table>
+      <el-table
+        :data="tableData2"
+        border
+        style="width: 100%">
+        <el-table-column
+          prop="info"
+          label="简介">
+        </el-table-column>
+      </el-table>
+
+      <h3>详细信息</h3>
+      <div v-html="this.newinfo"></div>
     </el-tab-pane>
     <!--<el-tab-pane label="关系图谱" name="second">-->
       <!--<el-row :gutter="40">-->
@@ -65,7 +97,7 @@
 
   export default {
     components: { CardPoem },
-    props: ['born','death','info','work'],
+    props: ['newinfo','tableData1','tableData2'],
     data() {
       return {
         activeName: 'first',
@@ -81,7 +113,7 @@
         }],
         edgelist:[],
         list:[],
-        author:this.$route.params.id
+        author:this.$route.params.id,
       };
     },
     created(){

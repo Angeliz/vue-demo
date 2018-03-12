@@ -8,12 +8,12 @@
           <el-row :gutter="40">
             <el-col :md="5">
               <div class="grid-content bg-purple">
-                <InfoPoet :name=name :alter-name=poet[0].alter_name></InfoPoet>
+                <InfoPoet :name=name :alter-name=tableData11[0].altername></InfoPoet>
               </div>
             </el-col>
             <el-col :md="19">
               <div class="grid-content bg-purple">
-                <TabPoet :born=poet[0].born :death=poet[0].death :info=poet[0].info :work=poet[0].work></TabPoet>
+                <TabPoet :tableData1=tableData11 :tableData2=tableData22 :newinfo=newinfo></TabPoet>
               </div>
             </el-col>
           </el-row>
@@ -34,9 +34,12 @@
     components: { Nav,TabPoet,InfoPoet },
     data () {
       return {
-        poet:[],
         name:this.$route.params.id,
-        uri:this.$route.query.uri
+        uri:this.$route.query.uri,
+        newinfo:'',
+        tableData11:[],
+        tableData22:[]
+
       }
     },
     created () {
@@ -46,9 +49,25 @@
       getData () {
         this.$api.get('/datasource/poet?poeturi='+this.$route.query.uri, null, r => {
           console.log(r);
-          this.poet=r;
-          console.log(this.poet);
-        })
+          this.tableData11=[{
+            name:this.name,
+            altername:r[0].alter_name,
+            born:r[0].born,
+            death:r[0].death,
+            work:r[0].work
+          }];
+          this.tableData22=[{
+            info:r[0].info
+          }];
+//          console.log(this.tableData11);
+//          console.log(this.tableData22);
+        });
+        this.$api.get('/datasource/datapoetinfo?name='+this.name, null, r => {
+          console.log(r);
+          for(let i=0;i<r.length;i++){
+            this.newinfo+=r[i];
+          }
+        });
       }
     }
   }

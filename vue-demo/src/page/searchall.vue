@@ -1,7 +1,7 @@
 <template>
   <div>
     <Nav></Nav>
-    <div style="width: auto;height: 673px;transition:all 0.2s; background-image: url('static/image/background.jpg');background-size:cover">
+    <div :style='bg'>
       <el-input placeholder="请输入查询内容"  style="width: 400px;left: 50%;top: 50%;margin-left: -200px;margin-top: -20px;" v-model="input">
         <el-button slot="append" icon="el-icon-search" v-on:click="animation"></el-button>
       </el-input>
@@ -31,13 +31,13 @@
     components: {Nav,CardPoet,CardPoem},
     data(){
       return{
-//        bg:{
-//          width: 'auto',
-//          height: '673px',
-//          transition: 'all 0.2s',
-//          backgroundImage: "url(" + require('../../static/image/background.jpg') + ")",
-//          backgroundSize:'cover'
-//        },
+        bg:{
+          width: 'auto',
+          height: '673px',
+          transition: 'all 0.2s',
+          backgroundImage: "url(" + require('../../static/image/background.jpg') + ")",
+          backgroundSize:'cover'
+        },
         input:'',
         poet:[],
         poem:[],
