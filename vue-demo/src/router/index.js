@@ -10,6 +10,7 @@ import PoemInfo from '@/page/poeminfo'
 import PoemCard from '@/page/poemcard'
 import SearchAll from '@/page/searchall'
 import SearchModel from '@/page/searchmodel'
+import Introduce from '@/page/introduce'
 
 Vue.use(Router)
 
@@ -45,6 +46,9 @@ export default new Router({
     },{
       path: '/searchmodel',
       component: SearchModel
+    },{
+      path: '/introduce',
+      component: Introduce
     }
   ]
 })
