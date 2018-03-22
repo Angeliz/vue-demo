@@ -2,15 +2,15 @@
   <div>
     <Nav></Nav>
     <el-container>
-      <el-aside width="10%"></el-aside>
+      <el-aside width="10%" class="aside"></el-aside>
       <el-container>
         <el-main>
           <el-row>
-            <el-col :span="24"><div class="grid-content bg-purple"><iframe src="http://www.freekg.cn/epoch/full.html" frameborder="0" scrolling="no" style="width: 100%;height: 500px"></iframe></div></el-col>
+            <el-col :md="24"><div class="grid-content bg-purple"><iframe src="http://www.freekg.cn/epoch/full.html" frameborder="0" scrolling="no" style="width: 100%;height: 500px"></iframe></div></el-col>
           </el-row>
           <el-row>
-            <el-col :span="12"><div class="grid-content bg-purple-light"><iframe src="http://www.freekg.cn/epoch/early.html" frameborder="0" scrolling="no" style="width: 100%;height: 300px"></iframe></div></el-col>
-            <el-col :span="12">
+            <el-col :md="12"><div class="grid-content bg-purple-light"><iframe src="http://www.freekg.cn/epoch/early.html" frameborder="0" scrolling="no" style="width: 100%;height: 300px"></iframe></div></el-col>
+            <el-col :md="12">
               <div class="grid-content bg-purple" style="height: 300px;display: table">
                 <div style="display: table-cell;vertical-align: middle;">
                   <h3 class="title">我们在做什么</h3>
@@ -24,7 +24,7 @@
             </el-col>
           </el-row>
           <el-row>
-            <el-col :span="12">
+            <el-col :md="12">
               <div class="grid-content bg-purple-light" style="height: 300px;display: table">
                 <div style="display: table-cell;vertical-align: middle;">
                   <h3 class="float-right title">从零开始的知识图谱自动构建</h3>
@@ -34,11 +34,11 @@
                 </div>
               </div>
             </el-col>
-            <el-col :span="12"><div class="grid-content bg-purple"><iframe src="http://www.freekg.cn/epoch/middle.html" frameborder="0" scrolling="no" style="width: 100%;height: 300px"></iframe></div></el-col>
+            <el-col :md="12"><div class="grid-content bg-purple"><iframe src="http://www.freekg.cn/epoch/middle.html" frameborder="0" scrolling="no" style="width: 100%;height: 300px"></iframe></div></el-col>
           </el-row>
           <el-row>
-            <el-col :span="12"><div class="grid-content bg-purple-light"><iframe src="http://www.freekg.cn/epoch/high.html" frameborder="0" scrolling="no" style="width: 100%;height: 300px"></iframe></div></el-col>
-            <el-col :span="12">
+            <el-col :md="12"><div class="grid-content bg-purple-light"><iframe src="http://www.freekg.cn/epoch/high.html" frameborder="0" scrolling="no" style="width: 100%;height: 300px"></iframe></div></el-col>
+            <el-col :md="12">
               <div class="grid-content bg-purple" style="height: 300px;display: table">
                 <div style="display: table-cell;vertical-align: middle;">
                   <h3 class="title">技术架构</h3>
@@ -50,7 +50,7 @@
             </el-col>
           </el-row>
           <el-row>
-            <el-col :span="12">
+            <el-col :md="12">
               <div class="grid-content bg-purple-light" style="height: 300px;display: table">
                 <div style="display: table-cell;vertical-align: middle;">
                   <h3 class="float-right title">从零开始的知识图谱自动构建</h3>
@@ -60,11 +60,11 @@
                 </div>
               </div>
             </el-col>
-            <el-col :span="12"><div class="grid-content bg-purple"><iframe src="http://www.freekg.cn/epoch/late.html" frameborder="0" scrolling="no" style="width: 100%;height: 300px"></iframe></div></el-col>
+            <el-col :md="12"><div class="grid-content bg-purple"><iframe src="http://www.freekg.cn/epoch/late.html" frameborder="0" scrolling="no" style="width: 100%;height: 300px"></iframe></div></el-col>
           </el-row>
         </el-main>
       </el-container>
-      <el-aside width="10%"></el-aside>
+      <el-aside width="10%" class="aside"></el-aside>
     </el-container>
 
   </div>

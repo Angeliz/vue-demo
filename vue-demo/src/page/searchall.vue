@@ -2,12 +2,12 @@
   <div>
     <Nav></Nav>
     <div :style='bg'>
-      <el-input placeholder="请输入查询内容"  style="width: 400px;left: 50%;top: 50%;margin-left: -200px;margin-top: -20px;" v-model="input">
+      <el-input placeholder="请输入查询内容"  style="width: 350px;left: 50%;top: 49%;margin-left: -175px;margin-top: -20px;" v-model="input">
         <el-button slot="append" icon="el-icon-search" v-on:click="animation"></el-button>
       </el-input>
     </div>
     <el-container>
-      <el-aside width="10%"></el-aside>
+      <el-aside width="10%" class="aside"></el-aside>
       <el-container>
         <el-main>
           <div class="waterfall">
@@ -17,7 +17,7 @@
           </div>
         </el-main>
       </el-container>
-      <el-aside width="10%"></el-aside>
+      <el-aside width="10%" class="aside"></el-aside>
     </el-container>
   </div>
 </template>

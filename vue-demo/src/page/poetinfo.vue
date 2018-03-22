@@ -2,7 +2,7 @@
   <div>
     <Nav></Nav>
     <el-container>
-      <el-aside width="10%"></el-aside>
+      <el-aside width="10%" class="aside"></el-aside>
       <el-container>
         <el-main>
           <el-row :gutter="40">
@@ -19,7 +19,7 @@
           </el-row>
         </el-main>
       </el-container>
-      <el-aside width="10%"></el-aside>
+      <el-aside width="10%" class="aside"></el-aside>
     </el-container>
   </div>
 </template>

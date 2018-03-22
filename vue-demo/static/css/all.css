@@ -1,16 +1,73 @@
-/*卡片页面瀑布流布局*/
-.waterfall{
-  -moz-column-count:4; /* Firefox */
-  -webkit-column-count:4; /* Safari 和 Chrome */
-  column-count:4;
-  -moz-column-gap: 1em;
-  -webkit-column-gap: 1em;
-  column-gap: 1em;
-  column-width:23%;
+/*web*/
+@media screen and (min-width: 700px) {
+  /*卡片页面瀑布流布局*/
+  .waterfall{
+    -moz-column-count:4; /* Firefox */
+    -webkit-column-count:4; /* Safari 和 Chrome */
+    column-count:4;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+    column-width:23%;
+  }
+  .item{
+    margin: 0 0 1em 0;
+    -moz-page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+  /*首页和查询搜索框*/
+  .search-width{
+    width:400px;
+    height:200px;
+    left:50%;
+    top:50%;
+    position:relative;
+    margin-left:-200px;
+    margin-top:-150px;
+  }
+  /*首页按钮组*/
+  .index-btn{
+    position: fixed;
+    bottom: 200px;
+    left:50%;
+    margin-left: -345px;
+  }
+  /*图谱显示*/
+  .tupu{
+    width: 100%;
+    height: 600px;
+  }
 }
-.item{
-  margin: 0 0 1em 0;
-  -moz-page-break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  break-inside: avoid;
+/*app*/
+@media screen and (max-width: 700px) {
+  /*首页和查询搜索框*/
+  .search-width{
+    width: 300px;
+    left:50%;
+    top:50%;
+    position:relative;
+    margin-left:-150px;
+    margin-top:-150px;
+  }
+  /*首页按钮组*/
+  .index-btn{
+    margin: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 100px;
+  }
+  .btn{
+    margin-bottom: 10px;
+  }
+  /*图谱显示*/
+  .tupu{
+    width: 100%;
+    height: 300px;
+    margin: 10px 0 20px 0;
+  }
+  /*不显示两边留白布局*/
+  .aside{
+    display: none;
+  }
 }

@@ -2,14 +2,14 @@
   <div>
     <Nav></Nav>
     <el-container>
-      <el-aside width="10%"></el-aside>
+      <el-aside width="10%" class="aside"></el-aside>
       <el-container>
         <el-main>
           <el-row :gutter="40">
             <el-col :md="14">
               <div class="grid-content bg-purple">
-                <div id="myChart" style="width: 600px;height: 600px;"></div>
-                <div id="xChart" style="width: 600px;height: 600px;"></div>
+                <div id="myChart" class="tupu"></div>
+                <div id="xChart" class="tupu"></div>
               </div>
             </el-col>
             <el-col :md="10">
@@ -21,7 +21,7 @@
           </el-row>
         </el-main>
       </el-container>
-      <el-aside width="10%"></el-aside>
+      <el-aside width="10%" class="aside"></el-aside>
     </el-container>
   </div>
 </template>

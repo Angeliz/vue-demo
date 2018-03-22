@@ -2,7 +2,7 @@
   <div>
     <Nav></Nav>
     <el-container>
-      <el-aside width="10%"></el-aside>
+      <el-aside width="10%" class="aside"></el-aside>
       <el-container>
         <!--<el-header>Header</el-header>-->
         <el-main>
@@ -11,7 +11,7 @@
           </div>
         </el-main>
       </el-container>
-      <el-aside width="10%"></el-aside>
+      <el-aside width="10%" class="aside"></el-aside>
     </el-container>
 
   </div>

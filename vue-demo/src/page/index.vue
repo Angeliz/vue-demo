@@ -2,20 +2,20 @@
     <div :style="styleDiv">
       <!--<Nav></Nav>-->
       <el-button v-on:click="toIntroduce" style="position: fixed;top: 20px;right: 20px;height: 50px;width: 100px;background-color: #FF7043;color: white">介绍</el-button>
-      <div :style='styleInput'>
+      <div class="search-width">
         <h1 style="text-align: center">FREEKG</h1>
         <el-input placeholder="请输入查询内容"  v-model="input">
           <el-button slot="append" icon="el-icon-search" v-on:click="answerSearch"></el-button>
         </el-input>
         <br/>
       </div>
-      <div style="position: fixed;bottom: 200px;left:50%;margin-left: -345px;">
-        <el-button v-on:click="toPoetcatalog" style="background-color: #42A5F5;color: white">诗人目录</el-button>
-        <el-button v-on:click="toPoetrelation" style="background-color: #42A5F5;color: white">诗人关系图谱</el-button>
-        <el-button v-on:click="toPoetway" style="background-color: #42A5F5;color: white">诗人轨迹</el-button>
-        <el-button v-on:click="toPoetcard" style="background-color: #42A5F5;color: white">诗人卡片</el-button>
-        <el-button v-on:click="toPoemcard" style="background-color: #42A5F5;color: white">诗歌卡片</el-button>
-        <el-button v-on:click="toSearchall" style="background-color: #42A5F5;color: white">智能查询</el-button>
+      <div class="index-btn">
+        <el-button v-on:click="toPoetcatalog" style="background-color: #42A5F5;color: white" class="btn">诗人目录</el-button>
+        <el-button v-on:click="toPoetrelation" style="background-color: #42A5F5;color: white" class="btn">诗人关系图谱</el-button>
+        <el-button v-on:click="toPoetway" style="background-color: #42A5F5;color: white" class="btn">诗人轨迹</el-button>
+        <el-button v-on:click="toPoetcard" style="background-color: #42A5F5;color: white" class="btn">诗人卡片</el-button>
+        <el-button v-on:click="toPoemcard" style="background-color: #42A5F5;color: white" class="btn">诗歌卡片</el-button>
+        <el-button v-on:click="toSearchall" style="background-color: #42A5F5;color: white" class="btn">智能查询</el-button>
       </div>
     </div>
 </template>
