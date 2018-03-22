@@ -35,8 +35,9 @@
   }
   /*图谱显示*/
   .tupu{
-    width: 100%;
-    height: 600px;
+    /*width: 100%;*/
+    width: 650px;
+    height: 580px;
   }
 }
 /*app*/
@@ -62,7 +63,8 @@
   }
   /*图谱显示*/
   .tupu{
-    width: 100%;
+    /*width: 100%;*/
+    width: 350px;
     height: 300px;
     margin: 10px 0 20px 0;
   }

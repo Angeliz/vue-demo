@@ -7,9 +7,18 @@
         <el-main>
           <el-row :gutter="40">
             <el-col :md="14">
-              <div class="grid-content bg-purple">
-                <div id="myChart" class="tupu"></div>
-              </div>
+              <el-tabs v-model="activeName" @tab-click="handleClick">
+                <el-tab-pane label="环形图" name="first">
+                  <div class="grid-content bg-purple">
+                    <div id="myChart" class="tupu"></div>
+                  </div>
+                </el-tab-pane>
+                <el-tab-pane label="力导向图" name="second">
+                  <div class="grid-content bg-purple">
+                    <div id="myChart2" class="tupu" ></div>
+                  </div>
+                </el-tab-pane>
+              </el-tabs>
             </el-col>
             <el-col :md="10">
               <div class="grid-content bg-purple">
@@ -48,6 +57,7 @@
     components: {Nav,CardPoem,CardPoet},
     data() {
       return {
+        activeName:'first',
         name0: '',
         poet:[],
         uri:'',
@@ -63,6 +73,7 @@
         const _this = this;
         // 基于准备好的dom，初始化echarts实例
         let myChart = echarts.init(document.getElementById('myChart'));
+        let myChart2=echarts.init(document.getElementById('myChart2'));
         let desinfo = [];
         let links =[];
         let namelist = [];
@@ -179,10 +190,73 @@
                 }
               ]
             };
+            let option2 = {
+              title: {
+                text: ''
+              },
+              tooltip: {},
+              series: [
+                {
+                  type: 'graph',
+                  layout: 'force',
+                  symbolSize: 28,
+                  roam: true,
+                  draggable:true,
+                  animation:false,
+                  label: {
+                    normal: {
+                      show: true,
+                      position: 'inside',
+                      formatter: '{b}',
+                      textStyle:{
+                        fontSize:10
+                      }
+                    }
+                  },
+                  force: {
+                    repulsion: 100,
+                    edgeLength:5
+                  },
+                  edgeSymbol: ['circle', 'arrow'],
+                  edgeSymbolSize: [4, 6],
+                  edgeLabel: {
+                    normal: {
+                      textStyle: {
+                        fontSize: 20
+                      }
+                    }
+                  },
+                  data: desinfo.map(function (node) {
+                    return {
+                      name:node.name,
+                      value:node.ob
+                    };
+                  }),
+                  // links: [],
+                  links:links,
+                  lineStyle: {
+                    normal: {
+                      opacity: 0.9,
+                      width: 2,
+                      curveness: 0
+                    }
+                  }
+                }
+              ]
+            };
             console.log(11111);
             myChart.hideLoading();
             myChart.setOption(option);
+            myChart2.setOption(option2);
             myChart.on('click', function (params) {
+              console.log(params);
+              if(params.dataType=="edge"){
+                _this.toEdge(params);
+              }else {
+                _this.toNode(params);
+              }
+            });
+            myChart2.on('click', function (params) {
               console.log(params);
               if(params.dataType=="edge"){
                 _this.toEdge(params);
