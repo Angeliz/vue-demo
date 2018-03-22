@@ -1,7 +1,7 @@
 <template>
     <div :style="styleDiv">
       <!--<Nav></Nav>-->
-      <el-button v-on:click="toIntroduce" style="position: fixed;top: 20px;right: 20px;height: 50px;width: 100px;background-color: #FF7043;color: white">介绍</el-button>
+      <el-button v-on:click="toIntroduce" style="position: fixed;top: 20px;right: 20px;height: 50px;width: 100px;background-color: black;color: white">介绍</el-button>
       <div class="search-width">
         <h1 style="text-align: center">FREEKG</h1>
         <el-input placeholder="请输入查询内容"  v-model="input">
@@ -41,7 +41,9 @@ export default {
         },
         styleDiv:{
           width:document.documentElement.clientWidth+'px',
-          height:document.documentElement.clientHeight+'px'
+          height:document.documentElement.clientHeight+'px',
+//          backgroundImage: "url(" + require('../../static/image/background.jpg') + ")",
+//          backgroundSize:'cover'
         }
       }
     },

@@ -5,7 +5,7 @@
       class="el-menu-demo"
       mode="horizontal"
       @select="handleSelect"
-      background-color="#545c64"
+      background-color='black'
       text-color="#fff"
       active-text-color="#2196F3"
       router = true>

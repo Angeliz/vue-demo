@@ -1,3 +1,7 @@
+/*all*/
+body{
+  /*background-color: #FAFAFA;*/
+}
 /*web*/
 @media screen and (min-width: 700px) {
   /*卡片页面瀑布流布局*/
