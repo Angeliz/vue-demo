@@ -12,7 +12,7 @@
       <el-menu-item index="/">首页</el-menu-item>
       <el-submenu index="poet">
         <template slot="title">诗人</template>
-        <el-menu-item index="/poetcatalog">诗人目录</el-menu-item>
+        <!--<el-menu-item index="/poetcatalog">诗人目录</el-menu-item>-->
         <el-menu-item index="/poetrelation">诗人关系图谱</el-menu-item>
         <el-menu-item index="/poetway">诗人轨迹</el-menu-item>
         <el-menu-item index="/poetcard">诗人卡片</el-menu-item>

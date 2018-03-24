@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img style="width: 100%;" src='static/image/ciel.jpg'>
+    <img style="width: 100%;" :src=url>
     <p style="font-size: 18px;font-weight:300; ">{{name}}</p>
     <p style="font-size: 14px;font-style: oblique;">{{alterName}}</p>
     <hr style="margin-bottom: 20px;">
@@ -15,7 +15,7 @@
     props: ['name','alterName'],
     data(){
       return{
-//        url:'./static/image/ciel.jpg'
+        url:'http://photo.freekg.cn/'+this.$route.params.id+'.jpg'
       }
     }
   }

@@ -10,7 +10,7 @@
         <br/>
       </div>
       <div class="index-btn">
-        <el-button v-on:click="toPoetcatalog" style="background-color: #42A5F5;color: white" class="btn">诗人目录</el-button>
+        <!--<el-button v-on:click="toPoetcatalog" style="background-color: #42A5F5;color: white" class="btn">诗人目录</el-button>-->
         <el-button v-on:click="toPoetrelation" style="background-color: #42A5F5;color: white" class="btn">诗人关系图谱</el-button>
         <el-button v-on:click="toPoetway" style="background-color: #42A5F5;color: white" class="btn">诗人轨迹</el-button>
         <el-button v-on:click="toPoetcard" style="background-color: #42A5F5;color: white" class="btn">诗人卡片</el-button>
@@ -41,15 +41,20 @@ export default {
         },
         styleDiv:{
           width:document.documentElement.clientWidth+'px',
-          height:document.documentElement.clientHeight+'px',
-//          backgroundImage: "url(" + require('../../static/image/background.jpg') + ")",
-//          backgroundSize:'cover'
+          height:document.documentElement.clientHeight+'px'
         }
       }
     },
     methods: {
       answerSearch(){
-
+        this.$api.get('/datasource/unknownquery?name='+this.input, null, json=> {
+//          console.log(json);
+          if (json[0].born) {//判断单个实体的类型，是古诗还是诗人
+            window.location.assign("#/poetinfo/"+json[0].name+'?uri='+json[0].ob);
+          } else {
+            window.location.assign("#/poeminfo/"+json[0].name+'?uri='+json[0].o);
+          }
+        });
       },
       toPoetcatalog(){
         window.location.assign("#/poetcatalog/");

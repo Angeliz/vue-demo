@@ -7,7 +7,7 @@
         <el-main>
           <el-row :gutter="40">
             <el-col :md="14">
-              <el-tabs v-model="activeName" @tab-click="handleClick">
+              <el-tabs v-model="activeName" >
                 <el-tab-pane label="环形图" name="first">
                   <div class="grid-content bg-purple">
                     <div id="myChart" class="tupu"></div>
