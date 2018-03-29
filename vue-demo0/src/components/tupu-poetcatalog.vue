@@ -50,7 +50,7 @@
           "name": "诗人",
           "children": years
         };
-        this.$api.get('/allpoet.json', null, function (json) {//这里获取诗人列表
+        this.$api.get('/datasource/allpoet', null, function (json) {//这里获取诗人列表
             const num = json.length;
             for (let i = 0; i < num; i++) {
               if (json[i].born > 617 && json[i].born < 712) {

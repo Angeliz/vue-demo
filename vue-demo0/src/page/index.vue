@@ -1,25 +1,22 @@
 <template>
     <div :style="styleDiv">
       <!--<Nav></Nav>-->
-      <el-button v-on:click="toIntroduce" :style="styleIntroduce" type="text">介绍</el-button>
+      <el-button v-on:click="toIntroduce" style="position: fixed;top: 20px;right: 20px;height: 50px;width: 100px;background-color: black;color: white">介绍</el-button>
       <div class="search-width">
-        <h1 style="text-align: center;font-family: 'my">中文诗歌知识图谱</h1>
+        <h1 style="text-align: center">FREEKG</h1>
         <el-input placeholder="请输入查询内容"  v-model="input">
           <el-button slot="append" icon="el-icon-search" v-on:click="answerSearch"></el-button>
         </el-input>
         <br/>
       </div>
-      <div class="index-btn-container">
-        <div class="index-btn">
-          <!--<el-button v-on:click="toPoetcatalog" style="background-color: #42A5F5;color: white" class="btn">诗人目录</el-button>-->
-          <el-button v-on:click="toPoetrelation" type="text" class="btn">诗人关系图谱</el-button>
-          <el-button v-on:click="toPoetway"  type="text" class="btn">诗人轨迹</el-button>
-          <el-button v-on:click="toPoetcard" type="text" class="btn">诗人卡片</el-button>
-          <el-button v-on:click="toPoemcard" type="text" class="btn">诗歌卡片</el-button>
-          <el-button v-on:click="toSearchall" type="text" class="btn">智能查询</el-button>
-        </div>
+      <div class="index-btn">
+        <!--<el-button v-on:click="toPoetcatalog" style="background-color: #42A5F5;color: white" class="btn">诗人目录</el-button>-->
+        <el-button v-on:click="toPoetrelation" style="background-color: #42A5F5;color: white" class="btn">诗人关系图谱</el-button>
+        <el-button v-on:click="toPoetway" style="background-color: #42A5F5;color: white" class="btn">诗人轨迹</el-button>
+        <el-button v-on:click="toPoetcard" style="background-color: #42A5F5;color: white" class="btn">诗人卡片</el-button>
+        <el-button v-on:click="toPoemcard" style="background-color: #42A5F5;color: white" class="btn">诗歌卡片</el-button>
+        <el-button v-on:click="toSearchall" style="background-color: #42A5F5;color: white" class="btn">智能查询</el-button>
       </div>
-
     </div>
 </template>
 
@@ -45,20 +42,6 @@ export default {
         styleDiv:{
           width:document.documentElement.clientWidth+'px',
           height:document.documentElement.clientHeight+'px'
-        },
-        styleIntroduce:{
-          position: 'fixed',
-          top: '20px',
-          right: '20px',
-          height: '150px',
-          width: '150px',
-          fontSize:'30px',
-          fontFamily: 'my',
-          color: 'black',
-//          color: '#c23531',
-          backgroundImage: "url(" + require('../../static/image/2.png') + ")",
-          backgroundSize:'150px 150px',
-          backgroundPosition:'center'
         }
       }
     },

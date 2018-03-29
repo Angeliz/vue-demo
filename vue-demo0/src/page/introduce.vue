@@ -72,9 +72,7 @@
     float: right;
   }
   .title{
-    font-family: 'my';
-    font-size: 25px;
-    /*font-style: italic;*/
+    font-style: italic;
     /*color: #42A5F5;*/
   }
 </style>

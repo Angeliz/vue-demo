@@ -7,7 +7,7 @@
         <el-main>
           <el-row :gutter="40">
             <el-col :md="14">
-              <el-tabs v-model="activeName" @tab-click="handleClick">
+              <el-tabs v-model="activeName" >
                 <el-tab-pane label="环形图" name="first">
                   <div class="grid-content bg-purple">
                     <div id="myChart" class="tupu"></div>
@@ -78,7 +78,7 @@
         let links =[];
         let namelist = [];
         // 绘制图表
-        _this.$api.get('/allpoet.json', null, json => {
+        _this.$api.get('/datasource/allpoet', null, json => {
           myChart.showLoading();
           const num = json.length;
           for (let m = 0; m < num; m++) {
@@ -95,7 +95,7 @@
               }
             );
           }
-          _this.$api.get('/allrefer.json',null,function (rela) {
+          _this.$api.get('/datasource/relation',null,function (rela) {
             console.log("下面输入获得的rela列表");
             console.log(rela);
             for (let b=0;b<rela.length;b++){

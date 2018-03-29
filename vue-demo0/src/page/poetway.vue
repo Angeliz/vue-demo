@@ -314,7 +314,7 @@
         });
 //        console.log('000000000');
         let option = {
-          backgroundColor: '',
+          backgroundColor: '#fff',
           title: {},
           boundingCoords: [[80.50, 48.00], [130.00, 22.00]],
           tooltip: {

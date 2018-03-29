@@ -1,8 +1,8 @@
 <template>
-  <div >
+  <div>
     <Nav></Nav>
     <div :style='bg'>
-      <el-input placeholder="请输入查询内容"  style="width: 350px;height:40px;left: 50%;top: 48%;margin-left: -175px;margin-top: -20px" v-model="input">
+      <el-input placeholder="请输入查询内容"  style="width: 350px;left: 50%;top: 49%;margin-left: -175px;margin-top: -20px;" v-model="input">
         <el-button slot="append" icon="el-icon-search" v-on:click="animation"></el-button>
       </el-input>
     </div>
@@ -34,11 +34,10 @@
         bg:{
           width: 'auto',
           height: '673px',
-//          transition: 'all 0.2s',
-//          backgroundImage: "url(" + require('../../static/image/background.jpg') + ")",
-//          backgroundSize:'cover'
+          transition: 'all 0.2s',
+          backgroundImage: "url(" + require('../../static/image/background.jpg') + ")",
+          backgroundSize:'cover'
         },
-
         input:'',
         poet:[],
         poem:[],

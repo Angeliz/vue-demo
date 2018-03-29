@@ -1,5 +1,5 @@
 <template>
-  <el-tabs v-model="activeName" @tab-click="handleClick">
+  <el-tabs v-model="activeName" >
     <el-tab-pane label="基本信息" name="first">
       <el-table
         :data="tableData1"
@@ -120,9 +120,9 @@
       this.getData();
     },
     methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-      },
+//      handleClick(tab, event) {
+//        console.log(tab, event);
+//      },
       getData () {
         this.nodeslist=[{
           name: this.$route.params.id,
