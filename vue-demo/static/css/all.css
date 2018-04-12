@@ -1,13 +1,13 @@
 /*all*/
 body{
-  background: url("../image/a.jpg") no-repeat;
+  background: url("../../static/image/a.jpg") no-repeat;
   background-size:cover;
   background-attachment:fixed;
 }
 @font-face
 {
   font-family: my;
-  src: url(../font/my.ttf);
+  src: url("../../static/font/my.ttf");
 }
 /*web*/
 @media screen and (min-width: 700px) {
@@ -43,7 +43,7 @@ body{
     margin-left: -500px;
     position: fixed;
     bottom: 200px;
-    background-image: url("../image/a.png");
+    background-image: url("../../static/image/a.png");
     background-repeat: no-repeat;
     background-position:center;
     height:100px;

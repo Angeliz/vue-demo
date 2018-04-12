@@ -155,15 +155,15 @@
                   },
                   lineStyle: {
                     normal: {
-                      // color: '#4a4564',
-                      color: '#ABC327',
+                       color: '#E53935',
+//                      color: '#ABC327',
                       curveness: 0.5
                     }
                   },
                   itemStyle:{
                     normal:{
-                      // color:'#292638'
-                      color:'#6C890B'
+//                      color:'#6C890B'
+                      color:'#c23531'
                     }
                   },
                   force: {

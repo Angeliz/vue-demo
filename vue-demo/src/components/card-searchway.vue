@@ -1,6 +1,6 @@
 <template>
   <div  class="item">
-    <el-card class="box-card" :style="style">
+    <el-card class="box-card" >
       <div slot="header" class="clearfix">
         <span style="color: #c23531;font-family: 'my';font-size: 20px">所选省份：{{place}}</span>
       </div>
@@ -13,14 +13,6 @@
 
 <script>
   export default {
-    data(){
-      return {
-        style:{
-          background: "url(" + require('../../static/image/1.png') + ")"+"no-repeat 0% 0%" ,
-          backgroundSize:'contain'
-        }
-      }
-    },
     props: ['place','count']
   }
 </script>
